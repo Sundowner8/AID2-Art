@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="keywords" content="AID, AID2, AI Dungeon 2, AI Dungeon, Art">
-		<meta name="description" content="An art gallery for the game AI Dungeon 2.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>AI Dungeon 2 Art Gallery</title>
-	</head>
-	<body style="background-color:#4b4b4b;">
-		<div class="art">
-			<center><img src="art/1.png"></center>
-			<br>
-			<center><img src="art/2.png"></center>
-			<br>
-			<center><img src="art/3.png"></center>
-			<br>
-			<center><img src="art/4.png"></center>
-			<br>
-			<center><img src="art/5.png"></center>
-			<br>
-			<center><img src="art/6.png"></center>
-			<br>
-			<center><img src="art/7.png"></center>
-			<br>
-			<center><img src="art/8.png"></center>
-			<br>
-			<center><img src="art/9.png"></center>
-			<br>
-			<center><img src="art/10.png"></center>
-			<br>
-			<center><img src="art/11.png"></center>
-			<br>
-			<center><img src="art/12.png"></center>
-			<br>
-			<center><img src="art/13.png" title="Open image in new tab for full size." style="width:800px;height:900px;"></center>
-			<br>
-			<center><img src="art/14.png" title="Open image in new tab for full size." style="width:800px;height:900px;"></center>
-			<br>
-			<center><img src="art/15.png"></center>
-			<br>
-			<center><img src="art/16.png"></center>
-		</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="AID, AID2, AI Dungeon 2, AI Dungeon, Art" />
+    <meta
+      name="description"
+      content="An art gallery for the game AI Dungeon."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/fullscreen/galleria.fullscreen.min.css"
+      integrity="sha512-Ys4O008qWchOofpxb7yhfWjnuuppkvX2BOaGjr0Giq4kMWxG05gssYX3dKKsiUyPrBblhaY/m4C3rSUOwyQ/eQ=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/galleria.min.js"
+      integrity="sha512-vRKUU1GOjCKOTRhNuhQelz4gmhy6NPpB8N41c7a36Cxl5QqKeB9VowP8S7x8Lf3B8vZVURBxGlPpvyiRHh+CKg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/fullscreen/galleria.fullscreen.min.js"
+      integrity="sha512-VkFRMki7TxlJfaKQABc/h3qR4mnP147ju+d9uc07mA/mXkzw/Vur/LrWpswimLD8TTj+JFwb8sMMYIcnMtCoxg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/jquery.zoom.js"></script>
+    <title>AI Dungeon Art Gallery</title>
+    <style type="text/css">
+      .galleria {
+        left: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="galleria">
+      <img src="/art/1.png" />
+      <img src="/art/2.png" />
+      <img src="/art/3.png" />
+      <img src="/art/4.png" />
+      <img src="/art/5.png" />
+      <img src="/art/6.png" />
+      <img src="/art/7.png" />
+      <img src="/art/8.png" />
+      <img src="/art/9.png" />
+      <img src="/art/10.png" />
+      <img src="/art/11.png" />
+      <img src="/art/12.png" />
+      <img src="/art/13.png" />
+      <img src="/art/14.png" />
+      <img src="/art/15.png" />
+      <img src="/art/16.png" />
+    </div>
+    <script>
+      (function () {
+        Galleria.loadTheme(
+          "https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/fullscreen/galleria.fullscreen.min.js"
+        );
+        Galleria.run(".galleria", {
+          imageCrop: false,
+        });
+        Galleria.on("image", function (e) {
+          $(e.imageTarget).parent().zoom();
+        });
+      })();
+    </script>
+  </body>
 </html>
