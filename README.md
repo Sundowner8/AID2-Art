@@ -7,3 +7,4 @@ Known Credits:
 - Art 3 : @Penpal_P
 - Art 4 : @Penpal_P
 - Art 17 : Gil Anon
+- Art 18 : Gil Anon
